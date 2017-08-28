@@ -13,10 +13,10 @@ clean_pop_est <- function(file, single_age, start_year, end_year){
     if (single_age == FALSE){
   
       nh_pop %<>%
-        age_grouping_clean(start_year = start_year, end_year = end_year)
+        clean_age_grouping(start_year = start_year, end_year = end_year)
       
       h_pop %<>%
-        age_grouping_clean(start_year = start_year, end_year = end_year)
+        clean_age_grouping(start_year = start_year, end_year = end_year)
         
       pop <- rbind(nh_pop, h_pop)
       
@@ -25,10 +25,10 @@ clean_pop_est <- function(file, single_age, start_year, end_year){
     if (single_age == TRUE){
       
       nh_pop %<>%
-        age_single_year_clean(start_year = start_year, end_year = end_year)
+        clean_single_year(start_year = start_year, end_year = end_year)
       
       h_pop %<>%
-        age_single_year_clean(start_year = start_year, end_year = end_year)
+        clean_single_year(start_year = start_year, end_year = end_year)
       
       pop <- rbind(nh_pop, h_pop)
 
