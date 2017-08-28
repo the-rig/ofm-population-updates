@@ -1,5 +1,5 @@
 
-# Required Libraries
+# Required Packages
 
 library(RCurl)
 
