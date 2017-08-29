@@ -1,6 +1,7 @@
 
 library(magrittr)
 library(stringr)
+library(readxl)
 
 clean_pop_est <- function(file, single_age, start_year, end_year){
 
@@ -51,3 +52,4 @@ clean_pop_est <- function(file, single_age, start_year, end_year){
   return(pop)
   
 }
+

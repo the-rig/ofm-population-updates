@@ -7,7 +7,8 @@ clean_single_year <- function(data, start_year, end_year){
   data %>%
     filter(age_group %in% c('15', '16', '17')
            , year >= start_year
-           , year <= end_year) %>%
+           , year <= end_year
+    ) %>%
     melt(id.vars = c('area_name'
                      , 'area_id'
                      , 'year'
@@ -26,3 +27,4 @@ clean_single_year <- function(data, start_year, end_year){
     return()
   
 }
+
