@@ -33,8 +33,8 @@ dir.create(dir_name)
 
 # downloading County files:
 
-download.file(url = pop_00_10, destfile = paste0(dir_name, '/pop_2000_2010.xlsx'), mode = 'wb')
-download.file(url = pop_10_16, destfile = paste0(dir_name, '/pop_2010_2016.xlsx'), mode = 'wb')
+download.file(url = pop_2000_2010, destfile = paste0(dir_name, '/pop_2000_2010.xlsx'), mode = 'wb')
+download.file(url = pop_2010_2016, destfile = paste0(dir_name, '/pop_2010_2016.xlsx'), mode = 'wb')
 
 # downloading County (special age groups) files:
 
