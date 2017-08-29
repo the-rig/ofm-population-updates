@@ -11,7 +11,7 @@ get_clean_pop_data <- function(files){
                , start_year = as.numeric(str_sub(years, 1, 4))
                , end_year = as.numeric(str_sub(years, 5, 8))
                , single_age = str_detect(files, '_s')) %>%
-    arrange(single_year) %>%
+    arrange(single_age) %>%
     mutate(start_year = ifelse(is.na(lag(end_year)) == FALSE & lag(end_year) == start_year
                                , start_year + 1, start_year))
   
