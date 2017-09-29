@@ -1,6 +1,6 @@
 # ofm-population-updates
 
-The files in this reository are intended to help with downloading and processing child population data from the Office of Financial Management (OFM) in Washignton State for Partners for Our Children (POC).
+The files in this repository are intended to help with downloading and processing child population data from the Office of Financial Management (OFM) in Washignton State for Partners for Our Children (POC).
 
 ## get_cleaned_population_estimates
 
