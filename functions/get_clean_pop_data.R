@@ -1,6 +1,5 @@
 
-library(stringr)
-library(dplyr)
+library(pocr)
 
 get_clean_pop_data <- function(files){
   
@@ -31,6 +30,14 @@ get_clean_pop_data <- function(files){
     
   }
   
-  return(bind_rows(pop_list))
+  pop_data <- bind_rows(pop_list)
+  
+  pop_data$age_group <- factor(pop_data$age_group, levels = c('0-4', '5-9', '10-14', '15-17', '0-17', 'Total'))
+  
+  # ordering data
+  
+  pop_data <- arrange(pop_data, sex, raceeth, year, area_id, age_group)
+  
+  return(pop_data)
   
 }

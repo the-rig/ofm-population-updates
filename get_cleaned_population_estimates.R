@@ -10,7 +10,7 @@ rm(files)
 
 setwd('..')
 
-# Insuting that the directory the data that we need exists
+# Insuring that the directory the data that we need exists
 
 if (!dir.exists('population_estimates') | length(list.files('population_estimates')) == 0) {
   source('get-population-data.R')
