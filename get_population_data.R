@@ -6,10 +6,11 @@ library(RCurl)
 # There are a number of files that need to be downloaded from OFM. 
 
 # OFM currenty has county population estimates between 2000 and 2016 that are split 
-# between two files, one that includes 2000 to 2010 and another that includes 2010 to 
-# 2016. The firs set of county files contain population estimates based on age (groupings), 
+# between two files; one that includes 2000 to 2010 and another that includes 2010 to 
+# 2016. The first set of county files contain population estimates based on age (groupings), 
 # sex, race and Hispanic origin. The second set of files with contain special individual 
-# age year estimates that can be used to exclude individuals over the age of 18.
+# age year estimates, these can be used to exclude individuals over the age of 18 and get 
+# ages 15 - 17.
 
 web_address <- 'http://www.ofm.wa.gov/pop/asr/sade/'
 
