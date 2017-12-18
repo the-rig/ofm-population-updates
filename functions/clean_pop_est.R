@@ -35,10 +35,10 @@ clean_pop_est <- function(file, single_age, start_year, end_year){
         clean_single_year(start_year = start_year, end_year = end_year)
       
       h_pop %<>%
-        clean_age_grouping(start_year = start_year, end_year = end_year)
+        clean_single_year(start_year = start_year, end_year = end_year)
       
       nh_pop %<>%
-        clean_age_grouping(start_year = start_year, end_year = end_year)
+        clean_single_year(start_year = start_year, end_year = end_year)
       
       pop <- rbind(total_pop, h_pop, nh_pop)
 
