@@ -20,8 +20,3 @@ download.file(url = 'https://www.ofm.wa.gov/sites/default/files/public/legacy/po
 # Median income by county
 
 # https://www.ofm.wa.gov/sites/default/files/public/legacy/economy/hhinc/medinc.xlsx
-
-(19870 - 18728) / 18728 * 100
-
-
-
