@@ -12,19 +12,19 @@ library(RCurl)
 # age year estimates, these can be used to exclude individuals over the age of 18 and get 
 # ages 15 - 17.
 
-web_address <- 'http://www.ofm.wa.gov/pop/asr/sade/'
+web_address <- 'https://www.ofm.wa.gov/sites/default/files/public/dataresearch/pop/asr/sade/'
 
 # file names
 
 # County:
 
 pop_2000_2010 <- paste0(web_address, 'ofm_pop_sade_county_2000_to_2010.xlsx')
-pop_2010_2016 <- paste0(web_address, 'ofm_pop_sade_county_2010_to_2016.xlsx')
+pop_2010_2017 <- paste0(web_address, 'ofm_pop_sade_county_2010_to_2017.xlsx')
 
 # County (special age groups):
 
 pop_2000_2010_s <- paste0(web_address, 'ofm_pop_sade_county_2000_to_2010_s.xlsx')
-pop_2010_2016_s <- paste0(web_address, 'ofm_pop_sade_county_2010_to_2016_s.xlsx')
+pop_2010_2017_s <- paste0(web_address, 'ofm_pop_sade_county_2010_to_2017_s.xlsx')
 
 # creating directory for population estimates
 
@@ -35,12 +35,12 @@ dir.create(dir_name)
 # downloading County files:
 
 download.file(url = pop_2000_2010, destfile = paste0(dir_name, '/pop_2000_2010.xlsx'), mode = 'wb')
-download.file(url = pop_2010_2016, destfile = paste0(dir_name, '/pop_2010_2016.xlsx'), mode = 'wb')
+download.file(url = pop_2010_2017, destfile = paste0(dir_name, '/pop_2010_2017.xlsx'), mode = 'wb')
 
 # downloading County (special age groups) files:
 
 download.file(url = pop_2000_2010_s, destfile = paste0(dir_name, '/pop_2000_2010_s.xlsx'), mode = 'wb')
-download.file(url = pop_2010_2016_s, destfile = paste0(dir_name, '/pop_2010_2016_s.xlsx'), mode = 'wb')
+download.file(url = pop_2010_2017_s, destfile = paste0(dir_name, '/pop_2010_2017_s.xlsx'), mode = 'wb')
 
 
 
