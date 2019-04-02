@@ -1,15 +1,15 @@
 
 library(pocr)
 
-get_clean_pop_data <- function(files){
+get_clean_pop_data <- function(file){
   
-  years <- str_replace_all(files, '[a-z]|_|\\.', '')
+  years <- str_replace_all(file, '[a-z]|_|\\.', '')
   
   file_data <- 
-    data.frame(file = files
+    data.frame(file = file
                , start_year = as.numeric(str_sub(years, 1, 4))
                , end_year = as.numeric(str_sub(years, 5, 8))
-               , single_age = str_detect(files, '_s')) %>%
+               , single_age = str_detect(file, '_s')) %>%
     arrange(single_age) %>%
     mutate(start_year = ifelse(is.na(lag(end_year)) == FALSE & lag(end_year) == start_year
                                , start_year + 1, start_year))
