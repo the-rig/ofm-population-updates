@@ -2,13 +2,10 @@
 library(dplyr)
 
 ofm_population <-
-  filter(ofm_data
-           , area_name != 'Washington'
-           , age_group != 'Total'
-           ) %>%
+  mutate(ofm_data, area_id = as.integer(area_id)) %>%
   left_join(select(ref_lookup_county
                            , county_cd
-                           , area_name = county_desc)
+                           , area_id = countyfips)
               ) %>%
   mutate(raceeth = ifelse(raceeth %in% c('non_hispanic_aian'
                                            , 'non_hispanic_asian'
