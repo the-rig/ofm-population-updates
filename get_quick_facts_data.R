@@ -59,5 +59,5 @@ quick_facts <-
   mutate(non_hispanic_white = non_hispanic_white / total_pop
          ,non_hispanic_white = round(non_hispanic_white * 100, 1))
 
-
+write.csv(x = quick_facts, file = "quick_facts.csv", row.names = FALSE)
 
